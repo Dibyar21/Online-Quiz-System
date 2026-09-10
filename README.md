@@ -220,8 +220,8 @@ After completing the quiz, the system automatically calculates:
            QUIZ RESULT
 ========================================
 
-Student Name       : Rahul
-Registration No.   : 2025001
+Student Name       : Dibya
+Registration No.   : 2026001
 
 Total Questions    : 30
 Correct Answers    : 24
