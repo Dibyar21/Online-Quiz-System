@@ -2,7 +2,7 @@
 
 A console-based **Online Quiz System** developed using **Java** and **Object-Oriented Programming (OOP)** concepts.
 
-This application allows students to register, attempt multiple-choice questions, and receive an automatically calculated result including **score, percentage, grade, correct/wrong answer count, and pass/fail status**.
+The application allows students to register, attempt multiple-choice questions, and receive an automatically generated result containing their **score, percentage, grade, correct/wrong answers, and pass/fail status**.
 
 ---
 
@@ -10,55 +10,56 @@ This application allows students to register, attempt multiple-choice questions,
 
 The **Online Quiz System** is a Java-based console application designed to simulate a simple online examination system.
 
-The project demonstrates the practical implementation of Java programming concepts such as:
+The project demonstrates the practical implementation of core Java programming and OOP concepts, including:
 
-- Object-Oriented Programming
-- Classes and Objects
-- Encapsulation
-- Abstraction
-- Constructors
-- Arrays
-- Exception Handling
-- Input Validation
-- Conditional Statements
-- Loops
-- Modular Programming
+* Object-Oriented Programming
+* Classes and Objects
+* Encapsulation
+* Constructors
+* Arrays
+* Methods
+* Conditional Statements
+* Loops
+* Exception Handling
+* Input Validation
+* Modular Programming
 
-The quiz currently contains **30 multiple-choice questions** covering different areas of Computer Science and programming.
+The system currently contains a **30-question multiple-choice question bank** covering different areas of Computer Science and programming.
 
 ---
 
 ## ✨ Features
 
-- 👨‍🎓 Student Registration
-- 📝 Multiple-Choice Questions
-- 📚 30-Question Question Bank
-- 🔢 Dynamic Question Numbering
-- ✅ Automatic Answer Verification
-- 📊 Automatic Score Calculation
-- 📈 Percentage Calculation
-- 🏆 Grade Calculation
-- ✔️ Pass/Fail Evaluation
-- ❌ Correct and Wrong Answer Count
-- ⚠️ Input Validation
-- 🛡️ Exception Handling
-- 🔄 Menu-Driven Application
-- 💻 Simple and User-Friendly Console Interface
-- 🧩 Modular OOP-Based Class Structure
+* 👨‍🎓 Student Registration
+* 📝 Multiple-Choice Questions (MCQs)
+* 📚 30-Question Question Bank
+* 🔢 Dynamic Question Numbering
+* ✅ Automatic Answer Verification
+* 📊 Automatic Score Calculation
+* 📈 Percentage Calculation
+* 🏆 Grade Calculation
+* ✔️ Pass/Fail Evaluation
+* ✅ Correct Answer Count
+* ❌ Wrong Answer Count
+* ⚠️ Input Validation
+* 🛡️ Exception Handling
+* 🔄 Menu-Driven Interface
+* 💻 Simple Console-Based User Interface
+* 🧩 Modular OOP-Based Class Structure
 
 ---
 
 ## 🛠️ Technologies Used
 
-| Technology | Purpose |
-|------------|---------|
-| **Java** | Core programming language |
-| **OOP** | Application architecture |
-| **Arrays** | Storing questions and options |
-| **Scanner** | Taking user input |
-| **Exception Handling** | Handling invalid data |
-| **Git** | Version control |
-| **GitHub** | Source code hosting |
+| Technology             | Purpose                                 |
+| ---------------------- | --------------------------------------- |
+| **Java**               | Core programming language               |
+| **OOP**                | Application architecture                |
+| **Arrays**             | Storing questions, options, and answers |
+| **Scanner**            | Taking user input                       |
+| **Exception Handling** | Handling invalid input                  |
+| **Git**                | Version control                         |
+| **GitHub**             | Source code hosting                     |
 
 ---
 
@@ -76,178 +77,233 @@ Online-Quiz-System/
 └── README.md
 ```
 
+### 📄 File Description
+
+| File              | Description                                                                      |
+| ----------------- | -------------------------------------------------------------------------------- |
+| `Final.java`      | Main class containing the application menu, student registration, and quiz setup |
+| `Student.java`    | Stores and manages student information                                           |
+| `Question.java`   | Represents quiz questions, options, and correct answers                          |
+| `Quiz.java`       | Controls quiz execution, user responses, and answer validation                   |
+| `QuizResult.java` | Calculates score, percentage, grade, and pass/fail status                        |
+| `.gitignore`      | Specifies files and folders that should not be tracked by Git                    |
+| `README.md`       | Documentation and project information                                            |
+
 ---
 
-## 📄 File Description
-### File	Description
-- Final.java -  Main class containing the application menu, student registration, and quiz setup
-Student.java -  Stores and manages student information
-Question.java -  Represents quiz questions, options, and correct answers
-Quiz.java -  Controls quiz execution and answer validation
-QuizResult.java -  Calculates and displays the final quiz result
-.gitignore -  Specifies files that should not be tracked by Git
-README.md  -  Contains project documentation
-
 ## 🧠 OOP Concepts Used
-### Encapsulation
 
-The project uses private fields to protect the internal data of classes.
+### 1. Encapsulation
 
+Private fields are used to protect the internal data of classes, while appropriate methods are used to access or modify the data.
+
+```java
 private String name;
 private String registrationNumber;
+```
 
-Getter methods are used to access the required information.
+---
 
-### Abstraction
+### 2. Classes and Objects
 
-Different responsibilities are separated into different classes:
+The application is divided into multiple classes, with each class responsible for a specific part of the system.
 
-Class	Responsibility
-Student	Student information
-Question	Question and answer information
-Quiz	Quiz execution and answer validation
-QuizResult	Result calculation and display
-Final	Application control and menu
+For example:
 
-This separation helps keep the application organized and easier to maintain.
+```java
+Student student = new Student();
+Question question = new Question();
+Quiz quiz = new Quiz();
+```
 
-### Constructors
+---
+
+### 3. Constructors
 
 Constructors are used to initialize objects with the required information.
 
-Student student = new Student(name, registrationNumber);
-Modular Design
+```java
+public Student(String name, String registrationNumber) {
+    this.name = name;
+    this.registrationNumber = registrationNumber;
+}
+```
 
-The application is divided into multiple classes, making the code easier to:
+---
 
-Understand
-Maintain
-Debug
-Modify
-Extend
+### 4. Modular Programming
 
-## 📊 Grading System
-Percentage	Grade	Result
-90% - 100%  O  PASS
-80% - 89%   E  PASS
-60% - 79%  	A  PASS
-40% - 59%  	B  PASS
-Below 40%  	F  FAIL
+The system is divided into separate classes such as `Student`, `Question`, `Quiz`, and `QuizResult`.
 
-The percentage, grade, and pass/fail status are calculated automatically based on the user's performance.
+This makes the application easier to:
 
-## 🚀 How to Run
-Prerequisites
+* Understand
+* Maintain
+* Debug
+* Modify
+* Extend
 
-Make sure Java JDK is installed on your system.
+---
 
-Check the Java version:
+## ⚙️ How the System Works
 
-java --version
+The application follows a simple quiz workflow:
 
-Check the Java compiler:
+```text
+Start Application
+       ↓
+Student Registration
+       ↓
+Display Main Menu
+       ↓
+Start Quiz
+       ↓
+Display Questions
+       ↓
+Take User Answers
+       ↓
+Validate Answers
+       ↓
+Calculate Score
+       ↓
+Calculate Percentage & Grade
+       ↓
+Display Result
+```
 
-javac --version
+---
 
-Clone the Repository
-git clone https://github.com/Dibyar21/Online-Quiz-System.git
+## ▶️ How to Run
 
-Navigate to the Project
-cd Online-Quiz-System
+### Prerequisites
 
-Compile the Project
-javac -d . *.java
+Make sure **Java JDK** is installed on your system.
 
-Run the Application
-java myPackage.Final
+Check the Java version using:
 
-## 🖥️ Sample Workflow
-============================================
-          WELCOME TO ONLINE QUIZ
-============================================
+```bash
+java -version
+```
 
--------------- MAIN MENU --------------
-1. Start Quiz
-2. Exit
----------------------------------------
-Enter your choice: 1
+### Compile the Project
 
-============================================
-           STUDENT REGISTRATION
-============================================
+Open the project directory in the terminal and run:
 
-Enter your name: Dibyar
-Enter your registration number: CSE001
+```bash
+javac *.java
+```
 
-The application then displays the quiz questions and options.
+### Run the Application
 
-Question 1 of 30
---------------------------------------------
-What is the capital of India?
+```bash
+java Final
+```
 
-1. Mumbai
-2. New Delhi
-3. Odisha
-4. Goa
+---
 
-Enter your answer (1-4):
-📈 Sample Result
-============================================
-              QUIZ RESULT
-============================================
+## 📊 Result Calculation
 
-Student Name       : Dibyar
-Registration No.   : CSE001
+After completing the quiz, the system automatically calculates:
 
---------------------------------------------
+* Total Questions
+* Correct Answers
+* Wrong Answers
+* Score
+* Percentage
+* Grade
+* Pass/Fail Status
+
+### Example
+
+```text
+========================================
+           QUIZ RESULT
+========================================
+
+Student Name       : Rahul
+Registration No.   : 2025001
 
 Total Questions    : 30
 Correct Answers    : 24
 Wrong Answers      : 6
+Score              : 24/30
 Percentage         : 80.00%
-Grade              : E
+Grade              : A
+Status             : PASS
 
---------------------------------------------
+========================================
+```
 
-Result             : PASS
-Congratulations! You performed well.
+> **Note:** The displayed grade depends on the grading logic implemented in `QuizResult.java`.
 
-============================================
+---
 
-## 🔮 Future Enhancements
+## 🛡️ Input Validation & Exception Handling
 
-The project can be further improved with:
+The application validates user input to prevent invalid entries during registration and quiz execution.
 
-🔀 Randomized Questions
-🔀 Randomized Answer Options
-⏱️ Quiz Timer
-🔁 Retry Quiz Option
-📚 Multiple Quiz Categories
-💾 Save Results to a File
-🏆 Leaderboard
-📊 Performance History
-🗄️ Database Integration
-🔐 User Authentication
-🖥️ Graphical User Interface
-🌐 Web-Based Version
-👨‍💼 Admin Panel for Question Management
-🎯 Learning Objective
+For example, the system can handle situations such as:
 
-This project was developed to gain practical experience in Java programming and Object-Oriented Programming.
+* Invalid menu choices
+* Invalid question options
+* Non-numeric input
+* Unexpected user input
 
-It demonstrates how classes, objects, encapsulation, abstraction, constructors, arrays, exception handling, input validation, and modular programming can be combined to build a functional console-based application.
+Java's **exception handling** mechanism is used to make the application more reliable and prevent unexpected program termination.
+
+---
+
+## 🎯 Learning Objectives
+
+This project was developed to gain practical experience with:
+
+* Java programming
+* OOP principles
+* Class design
+* Object creation
+* Data encapsulation
+* Arrays and collections of related data
+* User input handling
+* Exception handling
+* Program modularization
+* Basic Git and GitHub workflow
+
+---
+
+## 🚀 Future Enhancements
+
+The project can be extended with additional features such as:
+
+* 🗄️ Database integration
+* 👥 Multiple student accounts
+* 🔐 Login and authentication
+* ⏱️ Timer-based quiz
+* 🎲 Randomized questions
+* 📋 Question categories
+* 🏅 Leaderboard
+* 📊 Detailed performance reports
+* 💾 Storing quiz history
+* 🖥️ GUI-based interface using Java Swing or JavaFX
+* 🌐 Web-based version of the quiz system
+
+---
+
+## 📌 Project Status
+
+**Status:** ✅ Completed
+
+The current version provides a functional console-based quiz system with student registration, multiple-choice questions, answer validation, automatic result calculation, and exception handling.
+
+---
 
 ## 👨‍💻 Author
 
-Dibyaranjan Jena
+**Dibyaranjan Jena**
 
-## GitHub:
-https://github.com/Dibyar21
+A Java-based academic project demonstrating practical implementation of **Object-Oriented Programming and core Java concepts**.
 
-## ⭐ Support
+---
 
-If you find this project useful, consider giving the repository a ⭐.
+## 📜 License
 
-## 📄 License
-
-This project is created for educational and learning purposes.
+This project is created for **educational and academic purposes**.
