@@ -73,3 +73,28 @@ Online-Quiz-System/
 ├── QuizResult.java
 ├── Student.java
 └── README.md
+
+---
+
+### 📄 File Description
+
+| File | Description |
+|------|-------------|
+| `Final.java` | Main class containing the application menu, student registration, and quiz setup |
+| `Student.java` | Stores and manages student information |
+| `Question.java` | Represents quiz questions, options, and correct answers |
+| `Quiz.java` | Controls quiz execution and answer validation |
+| `QuizResult.java` | Calculates and displays the final quiz result |
+| `.gitignore` | Specifies files that should not be tracked by Git |
+
+---
+
+## 🧠 OOP Concepts Used
+
+### Encapsulation
+
+The project uses private fields to protect the internal data of classes.
+
+```java
+private String name;
+private String registrationNumber;
